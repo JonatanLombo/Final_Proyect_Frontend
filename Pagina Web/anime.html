@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="es">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&display=swap" rel="stylesheet">
+    <title>Convar</title>
+    <link rel="stylesheet" href="anime.css">
+  </head>
+  <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!--Menu de navegación-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nuestro_contenido.html">Nuestro contenido</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Entretenimiento</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./anime.html">Anime</a>
+                        <a class="dropdown-item" href="./comedia.html">Comedia</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactenos.html">Contactenos</a>
+                    </li> 
+                </ul>
+            </div>
+            <a class="navbar-brand" href="./index.html">Convar</a>
+        </nav>
+    </header>
+
+    <!--Titulo bienvenida-->
+    <h1>¡Disfruta la experiencia, acabas de entrar a la sección de animes!</h1>
+    
+    <!--Imagen principal de animes-->
+    <div class="container">
+        <div class="row">
+         
+            <!--Imagen 1-->  
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img class="img_bienvenida" src="./Imagenes/Anime/world_trigger.png" alt="Imagen anime">
+            </div>  
+
+            <!--Imagen 2-->
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img class="img_bienvenida" src="./Imagenes/Anime/wind_breaker.jpg" alt="Imagen anime">
+            </div>
+        </div>       
+
+        <p id="intro_anime"> 
+            Te ofrecemos diferentes opciones con diferentes plataformas, recuerda que puedes ver que varias plataformas 
+            <br>tengan el mismo anime, pero no la misma cantidad de capitulos y prioridad de publicación,
+            <br>¡tu eliges!
+        </p>
+
+        <div id="row_1" class="row">
+            <!--Logo Netflix-->   
+            <div class="col-12">
+                <div>
+                    <img class="logo_plataforma" src="./Imagenes/Canales/logo_netflix_corto.jpg" alt="Logo Netflix">    
+                    <a class="btn btn-primary" href="./anime_netflix.html" role="button">Ver portafolio</a>
+                </div>
+            </div>    
+        </div>    
+        
+        <!--Contenido Netflix-->  
+        <div id="row_2" class="row">
+             <!-- Castlevania-->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/Castlevania.jpg" alt="Imagen anime">
+                </div>  
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                    Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Castlevania</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <div>
+                        <p>
+                            Un cazador de vampiros lucha para salvar a una ciudad asediada de un ejército de bestias de otro mundo controladas por Drácula.
+                        </p>
+                        </div>
+                        <div>
+                            <img class="modal_imagen" src="./Imagenes/Anime/Castlevania_2.jpg" alt="imagen anime">
+                        </div>
+                        <div>
+                            <p>
+                            4 temporadas disponibles, con 32 espisodios 
+                            <br> Categoria 18+
+                            </p>
+                        </div> 
+                        <div> 
+                            <p>
+                            Disponibilidad de audio en: Ingles, Japanes, Español 
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                            Disponibilidad subtitulos en: Ingles, Japanes, Español 
+                            </p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+  
+            <!-- Siete pecados capitales--> 
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/7_pecados.png" alt="Imagen anime">
+                </div> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_2">
+                    Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">The seven deadly sins</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <div>
+                        <p>
+                            Cuando unos tiranos se hacen con su reino, la princesa derrocada comienza a buscar un grupo de caballeros malvados para que le ayuden a recuperar su reino.
+                        </p>
+                        </div>
+                        <div>
+                            <img class="modal_imagen" src="./Imagenes/Anime/7_pecados_2.png" alt="imagen anime">
+                        </div>
+                        <div>
+                            <p>
+                            5 temporadas disponibles, con 100 espisodios 
+                            <br> Categoria 13+
+                            </p>
+                        </div> 
+                        <div> 
+                            <p>
+                            Disponibilidad de audio en: Ingles, Japanes, Español 
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                            Disponibilidad subtitulos en: Ingles, Japanes, Español
+                            </p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                
+            <!-- Hunter x Hunter--> 
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/hunterxhunter.jpg" alt="Imagen anime">
+                </div> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_3">
+                    Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_3" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Hunter x Hunter</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <div>
+                        <p>
+                            Para alcanzar su sueño de convertirse en un cazador legendario como su padre, un joven debe pasar un riguroso examen y encontrar a su padre, que está desaparecido.
+                        </p>
+                        </div>
+                        <div>
+                            <img class="modal_imagen" src="./Imagenes/Anime/HunterxHunter.png" alt="imagen anime">
+                        </div>
+                        <div>
+                            <p>
+                            6 temporadas disponibles, con 148 espisodios 
+                            <br> Categoria 16+
+                            </p>
+                        </div> 
+                        <div> 
+                            <p>
+                            Disponibilidad de audio en: Ingles, Japanes, Español 
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                            Disponibilidad subtitulos en: Ingles, Japanes, Español
+                            </p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                
+            <!-- Haikyu --> 
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+                <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/haikyuu.jpg" alt="Imagen anime">
+                </div> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_4">
+                    Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_4" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Haikyu</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <div>
+                        <p>
+                            Dos jóvenes enemigos en el mundo del vóleibol escolar dejan sus diferencias para atacar a un enemigo común y enfrentar a otras escuelas con venganza.
+                        </p>
+                        </div>
+                        <div>
+                            <img class="modal_imagen" src="./Imagenes/Anime/Haikyuu_2.png" alt="imagen anime">
+                        </div>
+                        <div>
+                            <p>
+                            4 temporadas disponibles, con 85 espisodios 
+                            <br> Categoria 10+
+                            </p>
+                        </div> 
+                        <div> 
+                            <p>
+                            Disponibilidad de audio en: Japanes, Español 
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                            Disponibilidad subtitulos en: Japanes, Español
+                            </p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>   
+        </div> 
+         
+        <div id="row_3" class="row">
+            <!--Logo Crunchyroll-->   
+            <div class="col-12">
+                <div>
+                    <img class="logo_plataforma" src="./Imagenes/Canales/Crunchyroll-logo.png" alt="Logo Crunchiroll">
+                    <a class="btn btn-primary" href="./anime_crunchyroll.html" role="button">Ver portafolio</a>
+                </div>
+            </div>        
+        </div>  
+
+        <!--Contenido Crunchyroll-->  
+        <div id="row_4" class="row">        
+            
+            <!--Demon Slayer--> 
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+              <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/demon_sl.png" alt="Imagen anime">
+              </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_5">
+                  Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_5" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Demon Slayer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                       <div>
+                        <p>
+                          Tanjiro Kamado es un adolescente que vive con su familia y gana dinero vendiendo carbón. Su vida cambia cuando un demonio mata a todos los miembros de su familia y convierte a su hermana Nezuko en una de estas criaturas.
+    Tanjirō se convierte en un cazador de demonios para vengar la muerte de su familia y ayudar a su hermana a recuperar su humanidad
+                        </p>
+                       </div>
+                        <div>
+                          <img class="modal_imagen" src="./Imagenes/Anime/Demon_2.png" alt="imagen anime">
+                        </div>
+                        <div>
+                          <p>
+                            5 temporadas disponibles, con 64 espisodios 
+                            <br> Categoria 16+
+                          </p>
+                        </div> 
+                        <div> 
+                          <p>
+                            Disponibilidad de audio en: Japanese, Español (América Latina), English, Deutsch, Español (España), Français, Italiano, Português (Brasil), हिंदी, தமிழ், తెలుగు
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            Disponibilidad subtitulos en: Español (América Latina), English, Bahasa Indonesia, Bahasa Melayu, Deutsch, Español (España), Français, Italiano, Português (Brasil), Tiếng Việt, Русский, العربية, हिंदी, தமிழ், తెలుగు, 中文 (简体), 中文 (繁体), ไทย
+                          </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+           <!--Dr. Stone--> 
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+              <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/Sr_stone.png" alt="Imagen anime">
+              </div> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_6">
+                  Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_6" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Dr. Stone</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                       <div>
+                        <p>
+                          Senku es un joven extremadamente inteligente con un gran don para la ciencia y una ácida personalidad, y su mejor amigo es Taiju, que es muy buena persona pero más apto para usar los músculos que para pensar. Cuando tras cierto incidente toda la humanidad acaba convertida en piedra, ellos logran despertarse en un mundo miles de años después, con la civilización humana completamente desaparecida y con toda la humanidad congelada en piedra como ellos estuvieron. Ahora es su obligación rescatar a la gente y crear un nuevo mundo.
+                        </p>
+                       </div>
+                        <div>
+                          <img class="modal_imagen" src="./Imagenes/Anime/dr_stone_2.jpg" alt="imagen anime">
+                        </div>
+                        <div>
+                          <p>
+                            3 temporadas disponibles, con 59 espisodios 
+                            <br> Categoria 14+
+                          </p>
+                        </div> 
+                        <div> 
+                          <p>
+                            Disponibilidad audio en: Japanese, Español (América Latina), English, Deutsch, Español (España), Français, Italiano, Português (Brasil), العربية
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            Disponibilidad subtitulos en: Español (América Latina), English, Deutsch, Español (España), Français, Italiano, Português (Brasil), Русский, العربية
+                          </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>          
+          
+          <!--Attack On Titan--> 
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+              <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/attack_titan_2.jpg" alt="Imagen anime">
+              </div> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_7">
+                  Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_7" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Attack On Titan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                       <div>
+                        <p>
+                          Muchos años atrás, la humanidad estuvo al borde de la extinción con la aparición de unas criaturas gigantes que devoraban a todas las personas. Huyendo, la humanidad consiguió sobrevivir en una ciudad fortificada de altas murallas que se ha convertido en el último reducto de la civilización contra los Titanes que campan a sus anchas por el mundo. Ahora esa paz está a punto de verse interrumpida por una cadena de acontecimientos que llevará a desvelar qué son los Titanes y cómo aparecieron.
+                        </p>
+                       </div>
+                        <div>
+                          <img class="modal_imagen" src="./Imagenes/Anime/attack_on_titan.png" alt="imagen anime">
+                        </div>
+                        <div>
+                          <p>
+                            4 temporadas disponibles, con 99 espisodios 
+                            <br> Categoria 16+
+                          </p>
+                        </div> 
+                        <div> 
+                          <p>
+                            Disponibilidad audio en: Japanese, Español (América Latina), English, Deutsch, Español (España), Français, Português (Brasil)
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            Disponibilidad subtitulos en: Español (América Latina), English, Deutsch, Español (España), Français, Italiano, Português (Brasil), Русский, العربية
+                          </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          
+          <!--Dragon Ball Super--> 
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div>
+              <div>
+                <img class="contenido_anime" src="./Imagenes/Anime/Dragon_super.png" alt="Imagen anime">
+              </div> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop_8">
+                  Ver más
+                </button>
+                <div class="modal fade" id="staticBackdrop_8" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Dragon Ball Super</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                       <div>
+                        <p>
+                          El dios de la Destrucción ha despertado, y se está dedicando a aniquilar planetas y acaba de descubrir la Tierra. Cuando lo descubre, el guerrero Goku pide ayuda de sus amigos para convertirse en un legendario Super Saiyajin y poder derrotarlo.
+                        </p>
+                       </div>
+                        <div>
+                          <img class="modal_imagen" src="./Imagenes/Anime/Dragon_ball_super_2.png" alt="imagen anime">
+                        </div>
+                        <div>
+                          <p>
+                            1 temporada disponible, con 131 espisodios 
+                            <br> Categoria 12+
+                          </p>
+                        </div> 
+                        <div> 
+                          <p>
+                            Disponibilidad audio en: Japanese
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            Disponibilidad subtitulos en: Español (América Latina), English, Português (Brasil)
+                          </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </div> 
+
+</body>
+</html>

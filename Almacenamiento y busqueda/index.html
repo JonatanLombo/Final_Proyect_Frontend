@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Activdad #3</title>
+  </head>
+  <body>
+    
+    <div class="container">     
+    <div id="datos">
+        <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nombres">Nombres</label>
+            <input type="nombres" class="form-control" id="nombres" placeholder="Indique sus nombres">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="apellidos">Apellidos</label>
+            <input type="apellidos" class="form-control" id="apellidos" placeholder="Indique sus apellidos">
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="tipo_documento">Tipo de documento</label>
+                <select id="tipo_documento" class="form-control">
+                  <option selected>Seleccione el tipo de documento</option>
+                  <option>Registro Civil</option>
+                  <option>Tarjeta de identidad</option>
+                  <option>Cédula de ciudadanía</option>
+                  <option>Cédula de extrangería</option>
+                  <option>Pasaporte</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="numero_documento">Número de documento</label>
+                <input type="numero_documento" class="form-control" id="numero_documento" placeholder="Indique su número de documento">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="edad">Edad</label>
+              <input type="edad" class="form-control" id="edad" placeholder="Indique su edad">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="numero_telefono">Número de telefono</label>
+              <input type="numero_telefono" class="form-control" id="numero_telefono" placeholder="Indique su número de telefono">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="ciudad_residencia">Ciudad de residencia</label>
+              <input type="ciudad_residencia" class="form-control" id="ciudad_residencia" placeholder="Indique la ciudad en donde vive">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="direccion">Dirección</label>
+              <input type="direccion" class="form-control" id="direccion" placeholder="Indique su direccion de residencia">
+            </div>
+          </div>
+        <button type="submit" class="btn btn-primary" onclick="guardar()">Guardar</button>
+        <button type="submit" class="btn btn-primary" onclick="actualizar()">Actualizar</button>
+        <button type="submit" class="btn btn-primary" onclick="limpiar()">Limpiar</button>
+      </form>
+    </div>
+
+    <table class="table" style = "cursor: pointer;">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Número de identidad</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th 
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="buscar" placeholder="Digite el documento" aria-label="buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="buscar()">Buscar</button>
+              </form>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="lista_datos">
+        </tbody>
+      </table>      
+    </div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

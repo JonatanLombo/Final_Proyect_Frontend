@@ -1,0 +1,49 @@
+body{
+    background-color: #222029;
+    color: white;
+
+}
+#datos{
+    width: 612px;
+    height: 600px;
+    margin-left: calc(50% - 306px);
+    margin-top: 52px;
+    margin-bottom: -146px;
+}
+
+button.btn.btn-primary {
+    align-items: center;
+    border-radius: 12px;
+    border: solid #8800F0 !important;
+    color: white;
+    background-color: #70339E !important;
+    padding: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+button.btn.btn-primary:hover {
+    background-color: #222029 !important;
+    border: solid #F09D13 !important;
+    color: white;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    align-items: center;
+    border-radius: 12px;
+    border: solid #8800F0 !important;
+    color: white;
+    background-color: #70339E !important;
+    padding: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:not(:disabled):not(.disabled):hover {
+    background-color: #222029 !important;
+    border: solid #F09D13 !important;
+    color: white;
+}
+
+.table{
+    color: white;
+}
