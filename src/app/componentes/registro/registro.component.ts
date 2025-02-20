@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { PeticionService } from '../../servicios/peticion.service';
 import Swal from 'sweetalert2';
 
+
 @Component({
   selector: 'app-registro',
   standalone: true,

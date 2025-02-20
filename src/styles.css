@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.ventanaTrabajo {
+    height: calc(100vh - 20px);
+    position: absolute;
+    width: calc(100% - 144px);
+    margin-left: 144px;
+    overflow-y: auto;
+}
+
+.tituloVentana {
+    width: 100%;
+    background: antiquewhite;
+    border-radius: 20px;
+    font-size: 16px;
+    font-style: oblique;
+    text-align: center;
+    margin-top: 3px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}

@@ -4,7 +4,7 @@ import { FooterComponent } from "../footer/footer.component";
 import { FormsModule } from '@angular/forms';
 import { PeticionService } from '../../servicios/peticion.service';
 import Swal from 'sweetalert2';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-activar',
@@ -15,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ActivarComponent implements OnInit {
 
-    constructor(private peticion:PeticionService, private actroute: ActivatedRoute){}
+    constructor(private peticion:PeticionService, private actroute: ActivatedRoute, private router: Router){}
 
     email:string = ""
     codigo:string = ""
@@ -38,6 +38,8 @@ export class ActivarComponent implements OnInit {
         this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
           console.log(respuesta)
           if(respuesta.state == true){
+            //Redirección
+            this.router.navigate(["/login"])
             Swal.fire({
               title: 'Que bien!',
               text: respuesta.mensaje,

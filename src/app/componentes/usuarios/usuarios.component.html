@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+
+<div class="ventanaTrabajo">
+    <div class="tituloVentana">Usuarios</div>
+
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Email</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of datos">
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.estado}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>
+

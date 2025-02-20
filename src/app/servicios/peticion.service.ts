@@ -32,7 +32,7 @@ export class PeticionService {
     return promise
   }
 
-  get(url:string, payload:any){
+  get(url:string){
     let promise = new Promise((resolve,reject) =>{
 
       this.requestOptions = {

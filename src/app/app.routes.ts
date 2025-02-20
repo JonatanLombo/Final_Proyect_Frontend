@@ -4,6 +4,10 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ActivarComponent } from './componentes/activar/activar.component';
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { ServiciosComponent } from './componentes/servicios/servicios.component';
+import { CategoriasComponent } from './componentes/categorias/categorias.component';
 
 export const routes: Routes = [
     {path:"", component:HomeComponent, pathMatch:"full"},
@@ -11,5 +15,9 @@ export const routes: Routes = [
     {path:"registro", component:RegistroComponent, pathMatch:"full"},
     {path:"activar/:email/:codigo", component:ActivarComponent,pathMatch:"full"},
     {path:"login", component:LoginComponent,pathMatch:"full"},
-    {path:"contactenos", component:ContactenosComponent, pathMatch:"full"}
+    {path:"contactenos", component:ContactenosComponent, pathMatch:"full"},
+    {path:"usuarios", component:UsuariosComponent, pathMatch:"full"},
+    {path:"servicios", component:ServiciosComponent, pathMatch:"full"},
+    {path:"categorias", component:CategoriasComponent, pathMatch:"full"},
+    {path:"dashboard", component:DashboardComponent, pathMatch:"full"}
 ];

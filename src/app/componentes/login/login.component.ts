@@ -4,6 +4,7 @@ import { FooterComponent } from "../footer/footer.component";
 import Swal from 'sweetalert2';
 import { PeticionService } from '../../servicios/peticion.service';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-    constructor(private peticion:PeticionService){}
+    constructor(private peticion:PeticionService, private router: Router){}
 
     email:string = ""
     password:string = ""
@@ -31,6 +32,8 @@ export class LoginComponent {
       this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
         console.log(respuesta)
         if(respuesta.state == true){
+          //Redirección
+          this.router.navigate(["/dashboard"])
           Swal.fire({
             title: 'Que bien!',
             text: respuesta.mensaje,
