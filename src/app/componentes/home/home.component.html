@@ -1,3 +1,22 @@
 <app-header></app-header>
 
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-3" *ngFor="let item of datos">
+            <div class="item">
+                <div class="img">
+                    <img src="assets/user.png" alt="Imagen de uso">                
+                </div>
+                <div class="lblNombre">{{item.nombre}}</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
 <app-footer></app-footer>

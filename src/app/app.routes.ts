@@ -8,6 +8,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ServiciosComponent } from './componentes/servicios/servicios.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
 
 export const routes: Routes = [
     {path:"", component:HomeComponent, pathMatch:"full"},
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path:"usuarios", component:UsuariosComponent, pathMatch:"full"},
     {path:"servicios", component:ServiciosComponent, pathMatch:"full"},
     {path:"categorias", component:CategoriasComponent, pathMatch:"full"},
+    {path:"productos", component:ProductosComponent, pathMatch:"full"},
     {path:"dashboard", component:DashboardComponent, pathMatch:"full"}
 ];

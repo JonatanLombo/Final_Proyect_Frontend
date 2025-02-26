@@ -35,7 +35,7 @@ export class LoginComponent {
           //Redirección
           this.router.navigate(["/dashboard"])
           Swal.fire({
-            title: 'Que bien!',
+            title: '¡Que bien!',
             text: respuesta.mensaje,
             icon: 'success',
           })
@@ -43,7 +43,7 @@ export class LoginComponent {
         else
         {
           Swal.fire({
-            title: 'Error!',
+            title: '¡Error!',
             text: respuesta.mensaje,
             icon: 'error',
           })
