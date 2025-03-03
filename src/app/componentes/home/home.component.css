@@ -1,0 +1,24 @@
+.item {
+    border: solid 1px;
+    height: 184px;
+    position: relative;
+}
+
+img {
+    height: 110px;
+    margin-left: calc(50% - 60px);
+    border-radius: 50%;
+    margin-bottom: 4px;
+}
+
+.lblNombre {
+    width: 100%;
+    text-align: center;
+}
+
+.btn.btn-primary {
+    width: 100%;
+    text-align: center;
+    margin-left: calc(50% - 50%);
+    
+}

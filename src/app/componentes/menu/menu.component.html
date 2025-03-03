@@ -1,20 +1,21 @@
 <div id="menu">
     <div class="datosUsuarios">
         <img src="./assets/user.png" alt="Logo de usuario">
-        <div class="lblNombre">Jonatan Lombo</div>
-        <div class="lblRol">Administrador</div>
+        <div class="lblNombre">{{datos.nombre}}</div>
+        <div class="lblRol">{{datos.perfil}}</div>
     </div>
 
 
 <div class="opciones">
     <div class="item_opciones" routerLink="/dashboard">Dashboard</div>
-    <div class="item_opciones" routerLink="/usuarios">Usuarios</div>
-    <div class="item_opciones" routerLink="/productos">Productos</div>
-    <div class="item_opciones" routerLink="/servicios">Servicios</div>
-    <div class="item_opciones" routerLink="/categorias">Categorias</div>
-    <div class="item_opciones" routerLink="/login">Logout</div>
+    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'|| 'Vendedor'" routerLink="/usuarios">Usuarios</div>
+    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'|| 'Vendedor'" routerLink="/productos">Productos</div>
+    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'|| 'Vendedor'" routerLink="/servicios">Servicios</div>
+    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'" routerLink="/categorias">Categorias</div>
+    <div class="item_opciones" (click)="logout()" routerLink="/login">Cerrar Sesión</div>
 </div>
 
 </div>
+
 
 <div class="barraSuperior"></div>

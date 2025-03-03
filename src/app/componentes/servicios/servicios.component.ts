@@ -50,7 +50,7 @@ export class ServiciosComponent {
       this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
         this.codigo = respuesta[0].codigo
         this.nombre = respuesta[0].nombre
-        $('modalDatos').modal('show')
+        $('#modalDatos').modal('show')
     })
     }
   
@@ -73,7 +73,7 @@ export class ServiciosComponent {
         }
         else{
           this.listar()
-          $('modalDatos').modal('hide')
+          $('#modalDatos').modal('hide')
           Swal.fire({
             title: '¡Que bien!',
             text: respuesta.mensaje,
@@ -102,7 +102,7 @@ export class ServiciosComponent {
         }
         else{
           this.listar()
-          $('modalDatos').modal('hide')
+          $('#modalDatos').modal('hide')
           Swal.fire({
             title: '¡Que bien!',
             text: respuesta.mensaje,
@@ -130,7 +130,7 @@ export class ServiciosComponent {
         }
         else{
           this.listar()
-          $('modalDatos').modal('hide')
+          $('#modalDatos').modal('hide')
           Swal.fire({
             title: '¡Que bien!',
             text: respuesta.mensaje,
@@ -141,7 +141,7 @@ export class ServiciosComponent {
     }
   
     nuevo(){
-      $('modalDatos').modal('show')
+      $('#modalDatos').modal('show')
       this.codigo = ""
       this.nombre = ""
       this.idSeleccionado = ""

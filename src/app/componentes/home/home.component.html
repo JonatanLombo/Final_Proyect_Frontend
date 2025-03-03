@@ -5,10 +5,10 @@
         <div class="col-12 col-md-3" *ngFor="let item of datos">
             <div class="item">
                 <div class="img">
-                    <img src="assets/user.png" alt="Imagen de uso">                
+                    <img src="{{item.imagen}}" alt="Imagen del producto" onerror="this.onerror=null; this.src='assets/sin_adjunto.jpg';">                
                 </div>
                 <div class="lblNombre">{{item.nombre}}</div>
-
+                <div class="btn btn-primary" routerLink="/detallado/{{item.nombre}}/{{item._id}}">Ver más detalles</div>
             </div>
         </div>
     </div>

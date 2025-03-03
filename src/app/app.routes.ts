@@ -9,10 +9,12 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { ServiciosComponent } from './componentes/servicios/servicios.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { DetalladoComponent } from './componentes/detallado/detallado.component';
 
 export const routes: Routes = [
     {path:"", component:HomeComponent, pathMatch:"full"},
     {path:"home", component:HomeComponent, pathMatch:"full"},
+    {path:"detallado/:nombre/:_id", component:DetalladoComponent, pathMatch:"full"},
     {path:"registro", component:RegistroComponent, pathMatch:"full"},
     {path:"activar/:email/:codigo", component:ActivarComponent,pathMatch:"full"},
     {path:"login", component:LoginComponent,pathMatch:"full"},

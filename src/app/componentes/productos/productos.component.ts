@@ -24,6 +24,10 @@ export class ProductosComponent implements OnInit{
   datos:any[] = []
   nombre:String = ""
   codigo:String = ""
+  imagen:String = ""
+  precio:String = ""
+  perfil:String = "Cliente"
+  descripcion:String = ""
   idSeleccionado:String =""
 
   listar(){
@@ -50,7 +54,10 @@ export class ProductosComponent implements OnInit{
     this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
       this.codigo = respuesta[0].codigo
       this.nombre = respuesta[0].nombre
-      $('modalDatos').modal('show')
+      this.imagen = respuesta[0].imagen
+      this.precio = respuesta[0].precio
+      this.descripcion = respuesta[0].descripcion
+      $('#modalDatos').modal('show')
   })
   }
 
@@ -60,7 +67,10 @@ export class ProductosComponent implements OnInit{
       path:"/productos/actualizar",
       payload:{
         _id:this.idSeleccionado,
-        nombre:this.nombre
+        nombre:this.nombre,
+        imagen:this.imagen,
+        precio:this.precio,
+        descripcion:this.descripcion
       }
     }
     this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
@@ -73,7 +83,7 @@ export class ProductosComponent implements OnInit{
       }
       else{
         this.listar()
-        $('modalDatos').modal('hide')
+        $('#modalDatos').modal('hide')
         Swal.fire({
           title: '¡Que bien!',
           text: respuesta.mensaje,
@@ -89,7 +99,10 @@ export class ProductosComponent implements OnInit{
       path:"/productos/guardar",
       payload:{
         codigo:this.codigo,
-        nombre:this.nombre
+        nombre:this.nombre,
+        imagen:this.imagen,
+        precio:this.precio,
+        descripcion:this.descripcion
       }
     }
     this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
@@ -130,7 +143,7 @@ export class ProductosComponent implements OnInit{
       }
       else{
         this.listar()
-        $('modalDatos').modal('hide')
+        $('#modalDatos').modal('hide')
         Swal.fire({
           title: '¡Que bien!',
           text: respuesta.mensaje,
@@ -141,13 +154,13 @@ export class ProductosComponent implements OnInit{
   }
 
   nuevo(){
-    $('modalDatos').modal('show')
+    $('#modalDatos').modal('show')
     this.codigo = ""
     this.nombre = ""
+    this.imagen = ""
+    this.precio = ""
+    this.descripcion = ""
     this.idSeleccionado = ""
   }
-
-
-
 
 }

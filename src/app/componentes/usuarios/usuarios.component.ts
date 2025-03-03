@@ -25,7 +25,9 @@ export class UsuariosComponent implements OnInit {
   apellido:String = ""
   email:String = ""
   estado:String = "Activo"
-  emailSelecciodo:String= ""
+  perfil:String ="Cliente"
+  emailSeleccionado:String= ""
+  
 
   cargarTodos(){
     let post = {
@@ -41,7 +43,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   editarEmail(email:String){
-    this.emailSelecciodo = email
+    this.emailSeleccionado = email
 
     let post = {
       host:this.peticion.urlHost,
@@ -56,8 +58,8 @@ export class UsuariosComponent implements OnInit {
       this.apellido = respuesta[0].apellido
       this.email = respuesta[0].email
       this.estado = respuesta[0].estado
-
-      $('exampleModal').modal('show')
+      this.perfil = respuesta[0].perfil
+      $('#exampleModal').modal('show')
     })
   }
 
@@ -66,10 +68,11 @@ export class UsuariosComponent implements OnInit {
       host:this.peticion.urlHost,
       path:"/usuarios/actualizar",
       payload:{
-        email:this.emailSelecciodo,
+        email:this.emailSeleccionado,
         nombre:this.nombre,
         apellido:this.apellido,
-        estado:this.estado
+        perfil:this.perfil[0],
+        estado:this.estado[0]
       }
     }
     
@@ -80,7 +83,7 @@ export class UsuariosComponent implements OnInit {
           text: respuesta.mensaje,
           icon: 'success',
         })
-        $('exampleModal').modal('hide')
+        $('#exampleModal').modal('hide')
         this.cargarTodos()
       }
       else{
@@ -98,12 +101,12 @@ export class UsuariosComponent implements OnInit {
       host:this.peticion.urlHost,
       path:"/usuarios/eliminar",
       payload:{
-        email:this.emailSelecciodo,
+        email:this.emailSeleccionado,
       }
     }
     
     this.peticion.post(post.host + post.path, post.payload).then((respuesta:any) =>{
-      $('exampleModal').modal('hide')
+      $('#exampleModal').modal('hide')
       Swal.fire({
         title: 'Que bien!',
         text: respuesta.mensaje,
