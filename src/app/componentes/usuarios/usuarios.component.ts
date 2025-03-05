@@ -71,8 +71,8 @@ export class UsuariosComponent implements OnInit {
         email:this.emailSeleccionado,
         nombre:this.nombre,
         apellido:this.apellido,
-        perfil:this.perfil[0],
-        estado:this.estado[0]
+        perfil:this.perfil,
+        estado:this.estado
       }
     }
     

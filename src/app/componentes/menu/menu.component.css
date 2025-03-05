@@ -12,6 +12,7 @@ img {
     height: 100px;
     padding: 6px;
     margin-left: calc(50% - 50px);
+    border-radius: 50px;
 }
 
 .lblNombre {
@@ -48,4 +49,16 @@ img {
 background: antiquewhite;
 width: 100%;
 height: 20px;
+}
+
+.camara {
+    background: darkseagreen;
+    text-align: center;
+    width: 25px;
+    border-radius: 14px;
+    position: absolute;
+    top: 64px;
+    left: 59px;
+    font-size: 12px;
+    cursor: pointer;
 }

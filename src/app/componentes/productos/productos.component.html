@@ -15,7 +15,7 @@
         <tbody>
             <ng-container *ngFor="let item of datos">
                 <tr (click)="listar_id(item._id)">
-                    <td><img class="imagenItem" src="{{item.imagen}}" alt="Imagenes de los productos" onerror="this.onerror=null; this.src='assets/sin_adjunto.jpg';"></td>
+                    <td><img class="imagenItem" src="{{peticion.urlHost}}/imagenes/{{item._id}}.png?v={{Random()}}" alt="Imagenes de los productos" onerror="this.onerror=null; this.src='assets/sin_adjunto.jpg';"></td>
                     <td>{{item.codigo}}</td>
                     <td>{{item.nombre}}</td>
                     <td>{{item.precio}}</td>
@@ -39,6 +39,13 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="cargarArchivo" *ngIf="idSeleccionado !=''">
+          <h2>Cargar imagen</h2>
+          <input type="file" (change)="seleccionarImagen($event)">
+          <button (click)="cargarImagen()">Cargar imagen</button>
+        </div>
+
+
         <div class="form-group">
           <label for="codigo">Codigo</label>
           <input type="text" class="form-control" id="codigo" [(ngModel)]="codigo">
@@ -61,9 +68,9 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="guardar()"*ngIf="idSeleccionado ==''">Guardar</button>
-        <button type="button" class="btn btn-primary" (click)="actualizar()" *ngIf="idSeleccionado !=''">Actualizar</button>
-        <button type="button" class="btn btn-danger" (click)="eliminar()" *ngIf="idSeleccionado !=''">Eliminar</button>
+        <button type="button" class="btn btn-primary" (click)="guardar()"*ngIf="idSeleccionado =='' && usuario.perfil == 'Administrador'">Guardar</button>
+        <button type="button" class="btn btn-primary" (click)="actualizar()" *ngIf="idSeleccionado !='' && usuario.perfil == 'Administrador'">Actualizar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()" *ngIf="idSeleccionado !='' && usuario.perfil == 'Administrador'">Eliminar</button>
       </div>
     </div>
   </div>

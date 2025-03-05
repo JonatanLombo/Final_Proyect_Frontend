@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit{
     this.listarProductos()
   }
 
-  constructor(private peticion: PeticionService){}
+  constructor(public peticion: PeticionService){}
 
   datos:any[] =[]
 
