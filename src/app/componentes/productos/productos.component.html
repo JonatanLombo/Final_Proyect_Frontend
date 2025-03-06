@@ -68,9 +68,9 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="guardar()"*ngIf="idSeleccionado =='' && usuario.perfil == 'Administrador'">Guardar</button>
-        <button type="button" class="btn btn-primary" (click)="actualizar()" *ngIf="idSeleccionado !='' && usuario.perfil == 'Administrador'">Actualizar</button>
-        <button type="button" class="btn btn-danger" (click)="eliminar()" *ngIf="idSeleccionado !='' && usuario.perfil == 'Administrador'">Eliminar</button>
+        <button type="button" class="btn btn-primary" (click)="guardar()"*ngIf="idSeleccionado ==''">Guardar</button>
+        <button type="button" class="btn btn-primary" (click)="actualizar()" *ngIf="idSeleccionado !=''">Actualizar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()" *ngIf="idSeleccionado !=''">Eliminar</button>
       </div>
     </div>
   </div>
