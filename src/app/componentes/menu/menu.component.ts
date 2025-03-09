@@ -65,6 +65,7 @@ datos:any= {
   }
 
     selectedFile!:File
+    selectedPortada!:File
   
     seleccionarImagen(event:any){
       this.selectedFile = event.target.files[0];
@@ -72,8 +73,11 @@ datos:any= {
     }
   
     numRandom:number = 0
+    numRandom2:number = 0
+    
     Random(){
       this.numRandom = Math.floor(Math.random() * (9999 - 1000) + 1000);
+      this.numRandom2 = Math.floor(Math.random() * (9999 - 1000) + 1000);
     }
     
     cargarImagen(){
@@ -82,6 +86,37 @@ datos:any= {
         path:"/avatar/" + this.datos._id
       }
       this.peticion.uploadFile(this.selectedFile, post.host + post.path).subscribe(
+        (respuesta:any) => {
+          if(respuesta.state == false){
+            Swal.fire({
+            title: '¡Error!',
+            text: respuesta.mensaje,
+            icon: 'error',
+            })
+          }
+          else{
+            this.Random()           
+            Swal.fire({
+              title: '¡Que bien!',
+              text: respuesta.mensaje,
+              icon: 'success',
+              })
+          }
+        }
+      )
+    }
+
+    seleccionarImagen2(event:any){
+      this.selectedPortada = event.target.files[0];
+      this.cargarImagen2()
+    }
+    
+    cargarImagen2(){
+      var post = {
+        host:this.peticion.urlHost,
+        path:"/portada/" + this.datos._id
+      }
+      this.peticion.uploadFile(this.selectedPortada, post.host + post.path).subscribe(
         (respuesta:any) => {
           if(respuesta.state == false){
             Swal.fire({

@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="tituloVentana">Conocenos</div>
+    <div class="ventanaTrabajo">
+        <!--¿Quiénes somos-->
+            <div class="quienesSomos">
+            <h2>¿Quienes somos?</h2>    
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="text_1">{{text_1}}</textarea> 
+            </div>
+
+        
+        <!--Consejos-->
+        <div class="consejos">
+        <h2>Consejos</h2>       
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="text_2">{{text_2}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" *ngIf="_idSeleccionado === ''" (click)="guardar()">Guardar</button>
+        <button type="submit" class="btn btn-primary" (click)="actualizar()">Actualizar</button>
+        </div>
+        </div>
+    </div>    
+</div>    

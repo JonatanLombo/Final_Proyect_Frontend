@@ -1,0 +1,35 @@
+
+.videoInicial{
+    width: 100%;
+    height: 258px;
+}
+
+#video_1{
+    width: 100%;
+    height: 100%;
+}
+
+.texto_1 {
+    margin-top: 24px;
+}
+
+#portafolio{
+    margin-left: 96px;
+}
+
+.contenido_plantas{
+    height: 96px;
+    width: 134px;
+    margin-bottom: 5px;
+    margin-top: 45px;
+    border-radius: 20px;
+    border: solid 2px #735837;
+}
+
+button.btn.btn-primary {
+    background-color: #377273;
+    border: solid 2px #377273;
+    width: 133px;
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -16,7 +16,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ActivarComponent implements OnInit {
 
     constructor(private peticion:PeticionService, private actroute: ActivatedRoute, private router: Router){}
-
     email:string = ""
     codigo:string = ""
 

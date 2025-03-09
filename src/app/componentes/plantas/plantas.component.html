@@ -1,0 +1,74 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="tituloVentana">Productos</div>
+    <div class="ventanaTrabajo">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Imagen</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of datos">
+                <tr (click)="listar_id(item._id)">
+                    <td><img class="imagenItem" src="{{peticion.urlHost}}/plantas/{{item._id}}.png?v={{Random()}}" alt="Imagenes de los productos" onerror="this.onerror=null; this.src='assets/sin_adjunto.jpg';"></td>
+                    <td>{{item.codigo}}</td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.precio}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+      </table>
+
+      <div class="btnnuevo" (click)="nuevo()">+</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDatos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Datos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="cargarArchivo">
+          <h2>Cargar imagen</h2>
+          <input type="file" (change)="seleccionarImagen($event)">
+          <button (click)="cargarImagen()">Cargar imagen</button>
+        </div>
+
+
+        <div class="form-group">
+          <label for="codigo">Codigo</label>
+          <input type="text" class="form-control" id="codigo" [(ngModel)]="codigo">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre">
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripcion</label>
+          <textarea class="form-control" id="descripcion" rows="3" [(ngModel)]="descripcion"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="precio">Precio</label>
+          <input type="text" class="form-control" id="precio" [(ngModel)]="precio">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="guardar()"*ngIf="idSeleccionado ==''">Guardar</button>
+        <button type="button" class="btn btn-primary" (click)="actualizar()" *ngIf="idSeleccionado !=''">Actualizar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()" *ngIf="idSeleccionado !=''">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+
+textarea#exampleFormControlTextarea1 {
+    height: 320px;
+}
+
+.consejos {
+    margin-top: 44px;
+}
+
+button.btn.btn-primary {
+    background: #377273;
+    color: white;
+    border: #377273;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    margin-bottom: 0px;
+    background-color: #377273;
+    color: white;
+}

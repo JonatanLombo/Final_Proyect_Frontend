@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-.ventanaTrabajo {
-    height: calc(100vh - 20px);
-    position: absolute;
-    width: calc(100% - 144px);
-    margin-left: 144px;
-    overflow-y: auto;
+.ventanaTrabajo{
+    margin-top: 40px;
 }
+   
 
-.tituloVentana {
+/*.tituloVentana {
     width: 100%;
     background: antiquewhite;
     border-radius: 20px;
@@ -17,4 +14,18 @@
     margin-top: 3px;
     font-weight: 600;
     margin-bottom: 4px;
+}*/
+
+.tituloVentana{
+    text-align: center;
+    color: white;
+    margin-top: -33px;
+}
+
+body{
+    background-color: #F4EFE9;
+    color: black;
+    font-size: 16px;
+    font-family: "Anuphan", sans-serif;
+    font-weight: 300;
 }

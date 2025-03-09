@@ -1,33 +1,104 @@
-div#menu {
+/*div#menu {
     background: antiquewhite;
     width: 144px;
     height: 100vh;
     float: left;
-}
+}*/
 
-img {
+#imgPerfil {
     vertical-align: middle;
     border-style: none;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     padding: 6px;
-    margin-left: calc(50% - 50px);
-    border-radius: 50px;
+    border-radius: 60px;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -44px;
+}
+
+.portada {
+    width: 100%;
+    height: 174px;
+}
+
+#imgPortada{
+    height: 100%;
+    width: 100%;
+}
+
+.logoCargar {
+    background: white;
+    border-radius: 193px;
+    height: 22px;
+    position: absolute;
+    margin-left: 48px;
+    margin-top: 28px;
+    cursor: pointer;
+}
+#logoPortada{
+    /*margin-left: -60px;
+    margin-top: 52px;*/
+    /*margin-left: 925px;
+    margin-top: 124px;*/
+    margin-left: -58px;
+    margin-top: 48px;
+}
+
+#navEdit{
+    width: 990px;
+    margin-left: 120px;
+    margin-top: -24px;
+}
+
+nav.navbar {
+    background:#377273 !important;
+    color: white;
+}
+
+div#navbarNav a {
+    color: white;
+    transition: 0.0s ease-in-out;
+}
+
+div#navbarNav a:hover{
+    color:#F4EFE9;
+} 
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.dropdown-menu.show {
+    background-color: #377273;
+    transition: 0.0s ease-in-out;
+}
+
+.dropdown-menu.show:hover{
+    background-color: #377273;
+}
+
+.menu {
+    height: 90px;
+    width: 100%;
+}
+
+#logout{
+    margin-left: 294px;
 }
 
 .lblNombre {
-    width: 100%;
-    text-align: center;
     font-size: 14px;
-    font-style: oblique;
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 14px;
 }
 
 .lblRol {
-    width: 100%;
-    text-align: center;
     font-size: 14px;
-    font-style: oblique;
-    margin-bottom: 24px;
+    position: absolute;
+    margin-top: 64px;
+    margin-left: 18px;
 }
 
 .item_opciones {
@@ -45,20 +116,27 @@ img {
     border-radius: 16px;
 }
 
-.barraSuperior {
-background: antiquewhite;
-width: 100%;
-height: 20px;
+a.btn.btn-secondary.dropdown-toggle {
+    margin-left: 14px;
+    font-size: 14px;
+    font-style: oblique;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: 0.5s all;
 }
 
-.camara {
-    background: darkseagreen;
-    text-align: center;
-    width: 25px;
-    border-radius: 14px;
-    position: absolute;
-    top: 64px;
-    left: 59px;
-    font-size: 12px;
-    cursor: pointer;
+a.btn.btn-secondary.dropdown-toggle:hover {
+    padding-left: 10px;
+    background: #b1b1ef;
+    border-radius: 16px;
 }
+
+
+.barraSuperior {
+    background: #377273;
+    width: 100%;
+    height: 40px;
+    color: white;
+    margin-top: 22px;
+}
+

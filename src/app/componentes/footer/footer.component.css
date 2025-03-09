@@ -1,5 +1,89 @@
-footer {
-    background: antiquewhite;
-    padding-top: 30px;
-    padding-bottom: 20px;
+.decoracion{
+    margin-top: 80px;
+}
+
+.imgFooter{
+    width: 100%;
+}
+
+#imgFooter{
+    width: 100%;
+}
+
+footer{
+    padding-top: 32px;
+    color: white;
+    background-color: #735837;
+}
+
+.columna_contacto{
+    margin-left: 20%;
+}
+
+h5{
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 16px;
+}
+
+#telefono{
+    height: 30px;
+    width: 35px;
+    float: left;
+}
+
+#email{
+    height: 30px;
+    width: 36px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-top: 2px;
+    float: left;
+}
+
+#location{
+    height: 34px;
+    width: 40px;
+    padding-right: 10px;
+    margin-left: 10px; 
+    float: left;
+}
+
+.p_pie_2{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+h6{
+    margin-left: 20%;
+    margin-bottom: 22px;
+    font-size: 16px;  
+}
+
+#instagram{
+    height: 28px;
+    width: 38px;
+    padding-right: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+#facebook{
+    height: 28px;
+    width: 38px;
+    padding-right: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+#logo_pie{
+    height: 50%;
+    width: 70%;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.row {
+    text-align: center;
 }

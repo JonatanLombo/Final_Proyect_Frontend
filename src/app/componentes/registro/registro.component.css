@@ -1,11 +1,30 @@
 div#registro {
     width: 375px;
-    border: solid 1px antiquewhite;
-    background: antiquewhite;
+    color: white;
+    border: solid 1px #377273;
+    background: #377273;
     padding: 40px;
     margin: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-left: calc(50% - 180px);
+    margin-left: calc(50% - 187px);
     border-radius: 12px;
+}
+
+button.btn.btn-primary {
+    background: #F5DFDA;
+    color: #735837;
+    border: #735837;
+    border-radius: 14px;
+}
+
+.row {
+    margin-left: calc(50% - 180px);
+}
+
+h6 {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    font-size: 18px;
 }

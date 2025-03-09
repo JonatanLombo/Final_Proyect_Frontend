@@ -1,3 +1,46 @@
 nav.navbar {
-    background: antiquewhite !important;
+    background:#377273 !important;
+    color: white;
+}
+
+div#navbarNav a {
+    color: white;
+    transition: 0.0s ease-in-out;
+}
+
+div#navbarNav a:hover{
+    color: #F4EFE9;
+} 
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.dropdown-menu.show {
+    background: #377273;
+    transition: 0.0s ease-in-out;
+}
+
+.dropdown-menu.show:hover {
+    background: #377273;
+}
+
+#login{
+    position: absolute;
+    right: 40px;
+}
+
+#registro{
+    position: absolute;
+    right: 160px;
+}
+
+.bajoNav {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+#imgNav {
+    width: 100%;
 }

@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="videoInicial">
+                <video id="video_1" src="assets/video_2.mp4" autoplay loop></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="texto_1">
+                <p>
+                    Creemos que las plantas no solo embellecen los espacios, sino que también aportan bienestar, frescura y armonía a tu hogar. Te ofrecemos una cuidadosa selección de plantas de interior y exterior, adaptadas a diferentes necesidades y estilos de vida, para que encuentres la compañera perfecta para tu hogar o jardín.<br>
+                    Cada planta que vendemos ha sido elegida con esmero, priorizando la salud, la calidad y el respeto por el medio ambiente. Ya sea que busques un toque de verde para tu sala, una planta que purifique el aire o una opción resistente para tu jardín, en nuestra tienda encontrarás lo que necesitas para hacer crecer tu propio paraíso natural.<br>
+                    Déjate inspirar por la naturaleza y haz de tu hogar un lugar más verde y lleno de vida. ¡Las plantas están esperando para transformarlo todo!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="portafolio" class="row">
+       
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" *ngFor="let item of datos">
+          <div>
+            <div>
+              <img class="contenido_plantas" src="{{peticion.urlHost}}/imagenes/{{item._id}}.png" alt="Imagen producto" onerror="this.onerror=null; this.src='assets/sin_adjunto.jpg';">
+            </div>  
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" routerLink="/detallado/{{item.nombre}}/{{item._id}}">
+                Ver detalles
+              </button>
+          </div>
+        </div>  
+    </div>  
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

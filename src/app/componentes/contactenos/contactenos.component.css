@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+
+#imgContacto{
+        height: 225px;
+        margin-left: calc(50% - 112px);
+        margin-top: 28px;
+}

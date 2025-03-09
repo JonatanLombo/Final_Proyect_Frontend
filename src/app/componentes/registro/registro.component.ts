@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
 import { FormsModule } from '@angular/forms';
 import { PeticionService } from '../../servicios/peticion.service';
 import Swal from 'sweetalert2';
+import { OnSameUrlNavigation } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ import Swal from 'sweetalert2';
 })
 export class RegistroComponent {
 
-  constructor(private peticion:PeticionService){}
+  constructor(private peticion:PeticionService,){}
 
   nombre:string = ""
   apellido:string = ""

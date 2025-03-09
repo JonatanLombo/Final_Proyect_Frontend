@@ -1,6 +1,6 @@
-<div id="menu">
+<!--<div id="menu">
     <div class="datosUsuarios">
-        <img src="{{peticion.urlHost}}/avatar/{{datos._id}}.png?v={{numRandom}}" alt="Logo de usuario">
+        <img src="{{peticion.urlHost}}/avatar/{{datos._id}}.png?v={{numRandom}}" alt="Logo de usuario"> YA
         <label for="selectorImagen">
             <div class="camara">C</div>
         </label>
@@ -14,15 +14,86 @@
 
 
 <div class="opciones">
-    <div class="item_opciones" routerLink="/dashboard">Dashboard</div>
-    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'" routerLink="/usuarios">Usuarios</div>
-    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'|| datos.perfil == 'Vendedor'" routerLink="/productos">Productos</div>
-    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'|| datos.perfil == 'Vendedor'" routerLink="/servicios">Servicios</div>
-    <div class="item_opciones" *ngIf="datos.perfil == 'Administrador'" routerLink="/categorias">Categorias</div>
-    <div class="item_opciones" (click)="logout()" routerLink="/login">Cerrar Sesión</div>
+    <div class="item_opciones" routerLink="/dashboard">Dashboard</div> YA
+    <div class="item_opciones"  routerLink="/usuarios">Usuarios</div> YA
+    <div>
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"> YA
+          Productos
+        </a>  
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/plantas">Plantas</a> YA
+          <a class="dropdown-item" routerLink="/macetas">Macetas</a> YA
+        </div>
+      </div>
+    <!<div class="item_opciones"  routerLink="/productos">Productos</div> YA--> 
+    <!--<div class="item_opciones" *ngIf="datos.perfil == 'Administrador'|| datos.perfil == 'Vendedor'" routerLink="/servicios">Servicios</div> YA
+    <div class="item_opciones"  routerLink="/conocenos">Conocenos</div> YA
+    <div class="item_opciones"  routerLink="/login">Cerrar Sesión</div> YA
 </div>
 
+</div>-->
+
+
+
+<div class="container">
+
+  <div class="portada">
+    <img id="imgPortada" src="{{peticion.urlHost}}/portada/{{datos._id}}.png?v={{numRandom2}}" alt="Imagen portada" onerror="this.onerror=null; this.src='assets/portada_1.png';">
+    <label for="selectorPortada">
+    <img id="logoPortada" class="logoCargar" src="assets/subir.png" alt="logo de cargar">
+    </label>
+    <div class="cargarArchivo">
+      <input id="selectorPortada" type="file" (change)="seleccionarImagen2($event)" style="display: none;">
+    </div>
+  </div>
+ 
+  <div class="menu">
+    <!--Imagen de perfil y rol-->
+    <div class="imgPerfil">
+      <img id="imgPerfil" src="{{peticion.urlHost}}/avatar/{{datos._id}}.png?v={{numRandom}}" alt="Logo de usuario" onerror="this.onerror=null; this.src='assets/user.png';">
+      <label for="selectorImagen">
+      <img class="logoCargar" src="assets/subir.png" alt="logo de cargar">
+      </label>
+      <div class="cargarArchivo">
+        <input id="selectorImagen" type="file" (change)="seleccionarImagen($event)" style="display: none;">
+      </div>
+      <div class="lblNombre">{{datos.nombre}} </div>
+     <div class="lblRol">{{datos.perfil}}</div>
+    </div>
+
+  <nav id="navEdit" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="datos.perfil == 'Administrador'" routerLink="/usuarios">Usuarios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" *ngIf="datos.perfil == 'Administrador'|| datos.perfil == 'Vendedor'" routerLink="/plantas">Plantas</a>
+            <a class="dropdown-item" *ngIf="datos.perfil == 'Administrador'|| datos.perfil == 'Vendedor'" routerLink="/macetas">Macetas</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="datos.perfil == 'Administrador'" routerLink="/conocenos">Conócenos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/servicios">Nuestros compromiso</a>
+        </li>
+        <li id="logout" class="nav-item">
+          <a class="nav-link" (click)="logout()" routerLink="/login">Cerrar sesión</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+
+  <div class="barraSuperior"></div>
+
 </div>
-
-
-<div class="barraSuperior"></div>

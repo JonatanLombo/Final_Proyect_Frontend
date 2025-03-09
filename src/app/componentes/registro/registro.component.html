@@ -1,25 +1,26 @@
 <app-header></app-header>
 
 <div class="container">
-    <div id="registro">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="nombre" class="form-control" id="nombre" [(ngModel)]="nombre">
-              </div>
-              <div class="form-group">
-                <label for="apellido">Apellidos</label>
-                <input type="apellido" class="form-control" id="apellido" [(ngModel)]="apellido">
-              </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" [(ngModel)]="email">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" id="password" [(ngModel)]="password">
-                </div>
-                <button type="submit" class="btn btn-primary" (click)="registrar()">Registrar</button>
-    </div>
+      <div id="registro">
+        <div><h6>Registra tus datos</h6></div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="nombre" class="form-control" id="nombre" [(ngModel)]="nombre">
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellidos</label>
+          <input type="apellido" class="form-control" id="apellido" [(ngModel)]="apellido">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="password">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="registrar()">Registrar</button>
+      </div>
 </div>
 
 
